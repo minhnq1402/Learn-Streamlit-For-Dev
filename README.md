@@ -1,78 +1,115 @@
-# Levenshtein Distance Word Corrector
+# A Collection of AI Applications with Streamlit
 
-Đây là một ứng dụng web đơn giản được xây dựng bằng Streamlit nhằm minh họa chức năng sửa lỗi chính tả bằng thuật toán khoảng cách Levenshtein. Ứng dụng sẽ đề xuất từ đúng có khả năng nhất từ một kho từ vựng được xác định trước dựa trên khoảng cách chỉnh sửa.
+<div align="center">
 
-## Tổng quan
+[![GitHub stars](https://img.shields.io/github/stars/minhnq1402/Word-Correction-using-Levenshtein-Distance?style=for-the-badge)](https://github.com/minhnq1402/Word-Correction-using-Levenshtein-Distance/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/minhnq1402/Word-Correction-using-Levenshtein-Distance?style=for-the-badge)](https://github.com/minhnq1402/Word-Correction-using-Levenshtein-Distance/network)
+[![GitHub issues](https://img.shields.io/github/issues/minhnq1402/Word-Correction-using-Levenshtein-Distance?style=for-the-badge)](https://github.com/minhnq1402/Word-Correction-using-Levenshtein-Distance/issues)
+[![GitHub language](https://img.shields.io/github/languages/top/minhnq1402/Word-Correction-using-Levenshtein-Distance?style=for-the-badge)](https://github.com/minhnq1402/Word-Correction-using-Levenshtein-Distance)
 
-Dự án này cung cấp một cách triển khai thực tế của thuật toán khoảng cách Levenshtein cho một trường hợp sử dụng phổ biến: kiểm tra lỗi chính tả. Người dùng có thể nhập một từ có khả năng bị sai và ứng dụng sẽ tính toán "khoảng cách chỉnh sửa" tới mọi từ trong một tệp từ vựng cục bộ. Từ có khoảng cách ngắn nhất sẽ được gợi ý làm phương án thay thế chính xác.
+**Một bộ sưu tập các ứng dụng trí tuệ nhân tạo (AI) được xây dựng bằng Python và Streamlit.**
 
-Toàn bộ giao diện người dùng được xây dựng bằng Streamlit, giúp nó có tính tương tác và dễ sử dụng.
+</div>
 
-## Nguyên lý hoạt động
+## 📖 Tổng quan
 
-Cốt lõi của ứng dụng này là thuật toán **khoảng cách Levenshtein**. Thuật toán này đo lường sự khác biệt giữa hai chuỗi bằng cách tính toán số lượng chỉnh sửa ký tự đơn tối thiểu (chèn, xóa hoặc thay thế) cần thiết để biến đổi từ này thành từ kia.
+Đây là kho mã nguồn chứa ba ứng dụng độc lập, được xây dựng để minh họa các khái niệm khác nhau trong lĩnh vực AI, bao gồm Xử lý ngôn ngữ tự nhiên (NLP) và Thị giác máy tính (Computer Vision). Mỗi ứng dụng được triển khai với giao diện web tương tác bằng Streamlit.
 
-Ví dụ, khoảng cách Levenshtein giữa "**kitten**" và "**sitting**" là 3, vì nó đòi hỏi ba lần chỉnh sửa:
-1.  **k**itten → **s**itten (thay thế "k" bằng "s")
-2.  sitt**e**n → sitt**i**n (thay thế "e" bằng "i")
-3.  sittin → sittin**g** (chèn ký tự "g")
+1.  **Sửa lỗi từ (Word Correction):**
+    * Sử dụng thuật toán khoảng cách Levenshtein để đo lường sự khác biệt giữa hai chuỗi ký tự.
+    * Ứng dụng cho phép người dùng nhập một từ, sau đó tìm và gợi ý từ đúng nhất có trong từ điển dựa trên khoảng cách Levenshtein nhỏ nhất.
 
-Ứng dụng tận dụng số liệu này để tìm ra từ "gần nhất" trong kho từ vựng so với từ mà người dùng nhập vào.
+2.  **Phát hiện đối tượng (Object Detection):**
+    * Sử dụng mô hình MobileNetSSD đã được huấn luyện trước và thư viện OpenCV để phát hiện các đối tượng trong hình ảnh.
+    * Người dùng có thể tải lên một hình ảnh, và ứng dụng sẽ vẽ các hộp giới hạn (bounding box) xung quanh các đối tượng mà nó nhận diện được.
 
-## Tính năng
+3.  **ChatBot đơn giản (Simple ChatBot):**
+    * Một giao diện chatbot tương tác, tích hợp với các mô hình ngôn ngữ lớn thông qua thư viện `hugchat`.
+    * Người dùng cần cung cấp thông tin đăng nhập Hugging Face để trò chuyện và nhận phản hồi từ AI.
 
--   Giao diện web đơn giản và trực quan được xây dựng bằng Streamlit.
--   Tính toán khoảng cách Levenshtein giữa từ do người dùng cung cấp và mọi từ trong kho từ vựng tùy chỉnh.
--   Gợi ý từ đúng có khả năng nhất dựa trên khoảng cách chỉnh sửa tối thiểu.
--   Hiển thị toàn bộ kho từ vựng và các khoảng cách đã được sắp xếp để đảm bảo tính minh bạch và dễ phân tích.
+## ✨ Tính năng
 
-## Yêu cầu cài đặt
+### Đối với ứng dụng Sửa lỗi từ:
+-   Tính toán khoảng cách Levenshtein giữa các từ một cách hiệu quả.
+-   Tải và xử lý danh sách từ vựng từ file `vocab.txt`.
+-   Gợi ý từ đúng với giao diện trực quan hiển thị các khoảng cách đã tính.
 
+### Đối với ứng dụng Phát hiện đối tượng:
+-   Cho phép tải lên hình ảnh định dạng `jpg`, `png`, `jpeg`.
+-   Sử dụng mô hình Caffe (`MobileNetSSD`) để phát hiện đối tượng trong thời gian thực.
+-   Vẽ hộp giới hạn và hiển thị kết quả xử lý ngay trên giao diện.
+
+### Đối với ứng dụng ChatBot:
+-   Giao diện trò chuyện thân thiện, lưu lại lịch sử phiên làm việc.
+-   Yêu cầu đăng nhập an toàn qua sidebar để kết nối với Hugging Face.
+-   Tương tác trực tiếp với các mô hình ngôn ngữ mạnh mẽ.
+
+## 🛠️ Công nghệ sử dụng
+
+-   **Ngôn ngữ:** Python
+-   **Thư viện:**
+    -   **Streamlit:** Xây dựng giao diện web tương tác cho cả ba ứng dụng.
+    -   **OpenCV (`cv2`):** Xử lý hình ảnh trong ứng dụng phát hiện đối tượng.
+    -   **Numpy:** Thực hiện các phép toán số học hiệu quả.
+    -   **HugChat:** Giao tiếp với API của Hugging Face Chat.
+    -   **Pillow (PIL):** Xử lý và chuyển đổi định dạng hình ảnh.
+
+## 🚀 Hướng dẫn cài đặt và sử dụng
+
+### Yêu cầu
 -   Python 3.7+
--   pip (Trình quản lý gói của Python)
+-   Git
 
-## Cài đặt & Thiết lập
+### Cài đặt
 
-Làm theo các bước sau để thiết lập và chạy dự án trên máy của bạn.
+1.  **Clone repository về máy:**
+    ```bash
+    git clone [https://github.com/minhnq1402/Word-Correction-using-Levenshtein-Distance.git](https://github.com/minhnq1402/Word-Correction-using-Levenshtein-Distance.git)
+    cd Word-Correction-using-Levenshtein-Distance
+    ```
 
-1.  **Tải dự án về máy**
-    -   Tải tệp `levenshtein_distance.py` về thư mục làm việc của bạn.
+2.  **(Tùy chọn) Tạo và kích hoạt môi trường ảo:**
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate  # Trên Windows: .venv\Scripts\activate
+    ```
 
-2.  **Tạo tệp từ vựng**
-    -   Trong cùng thư mục với tệp script, hãy tạo một tệp có tên là `vocab.txt`.
-    -   Thêm các từ bạn muốn vào tệp này, mỗi từ trên một dòng. Ví dụ:
-        ```
-        thuật toán
-        ứng dụng
-        chỉnh sửa
-        khoảng cách
-        levenshtein
-        python
-        streamlit
-        ```
+3.  **Cài đặt các thư viện cần thiết:**
+    ```bash
+    pip install streamlit opencv-python numpy pillow hugchat
+    ```
 
-3.  **Cài đặt các thư viện cần thiết**
-    -   Mở terminal (hoặc Command Prompt) và điều hướng đến thư mục dự án.
-    -   Cài đặt thư viện Streamlit bằng lệnh sau:
-        ```bash
-        pip install streamlit
-        ```
+### Sử dụng
 
-## Hướng dẫn sử dụng
+Bạn có thể chạy riêng lẻ từng ứng dụng bằng các lệnh sau từ thư mục gốc của dự án:
 
-1.  Đảm bảo rằng bạn đang ở trong thư mục dự án trên terminal.
-2.  Chạy lệnh sau để khởi động ứng dụng Streamlit:
+1.  **Để chạy ứng dụng Sửa lỗi từ:**
     ```bash
     streamlit run levenshtein_distance.py
     ```
-3.  Trình duyệt web mặc định của bạn sẽ tự động mở một tab mới với ứng dụng đang chạy.
-4.  Nhập một từ vào ô đầu vào và nhấp vào nút "Compute" để xem gợi ý và kết quả tính toán khoảng cách.
+    *Lưu ý: Cần có file `vocab.txt` trong cùng thư mục để ứng dụng hoạt động.*
 
-## Cấu trúc dự án
+2.  **Để chạy ứng dụng Phát hiện đối tượng:**
+    ```bash
+    streamlit run object_detection.py
+    ```
+    *Lưu ý: Cần có thư mục `model` chứa các file `MobileNetSSD_deploy.caffemodel` và `MobileNetSSD_deploy.prototxt.txt`.*
 
-Dự án yêu cầu cấu trúc tệp như sau để hoạt động chính xác:
+3.  **Để chạy ứng dụng ChatBot:**
+    ```bash
+    streamlit run chatbot.py
+    ```
+    *Lưu ý: Bạn cần có tài khoản Hugging Face và nhập email/mật khẩu trên giao diện để sử dụng.*
+
+## 📁 Cấu trúc thư mục:
 ```
-/your-project-folder
-├── levenshtein_distance.py   # Tệp script chính của ứng dụng
-└── vocab.txt                 # Tệp chứa kho từ vựng
+Word-Correction-using-Levenshtein-Distance/
+├── README.md
+├── model/                          # Chứa các file model cho việc phát hiện đối tượng
+│   ├── MobileNetSSD_deploy.caffemodel
+│   └── MobileNetSSD_deploy.prototxt.txt
+├── vocab.txt                       # Từ điển cho ứng dụng sửa lỗi từ
+├── levenshtein_distance.py         # Mã nguồn ứng dụng sửa lỗi từ
+├── object_detection.py             # Mã nguồn ứng dụng phát hiện đối tượng
+└── chatbot.py                      # Mã nguồn ứng dụng chatbot
 ```
