@@ -73,6 +73,5 @@ Làm theo các bước sau để thiết lập và chạy dự án trên máy c�
 Dự án yêu cầu cấu trúc tệp như sau để hoạt động chính xác:
 
 /your-project-folder
-|
 ├── levenshtein_distance.py   # Tệp script chính của ứng dụng
 └── vocab.txt                 # Tệp chứa kho từ vựng
