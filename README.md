@@ -24,7 +24,7 @@
     * Người dùng có thể tải lên một hình ảnh, và ứng dụng sẽ vẽ các hộp giới hạn (bounding box) xung quanh các đối tượng mà nó nhận diện được.
 
 3.  **ChatBot đơn giản (Simple ChatBot):**
-    * Một giao diện chatbot tương tác, tích hợp với các mô hình ngôn ngữ lớn thông qua thư viện `hugchat`.
+    * Một giao diện chatbot tương tác, tích hợp với các mô hình ngôn ngữ lớn thông qua Hugging Face.
     * Người dùng cần cung cấp thông tin đăng nhập Hugging Face để trò chuyện và nhận phản hồi từ AI.
 
 ## ✨ Tính năng
@@ -64,8 +64,8 @@
 
 1.  **Clone repository về máy:**
     ```bash
-    git clone [https://github.com/minhnq1402/Word-Correction-using-Levenshtein-Distance.git](https://github.com/minhnq1402/Word-Correction-using-Levenshtein-Distance.git)
-    cd Word-Correction-using-Levenshtein-Distance
+        git clone https://github.com/minhnq1402/Learn-Streamlit-For-Dev.git
+        cd Learn-Streamlit-For-Dev
     ```
 
 2.  **(Tùy chọn) Tạo và kích hoạt môi trường ảo:**
