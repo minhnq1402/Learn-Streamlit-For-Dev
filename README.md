@@ -11,7 +11,7 @@
 
 </div>
 
-## 📖 Tổng quan
+## 1.Tổng quan
 
 Đây là kho mã nguồn chứa ba ứng dụng độc lập, được xây dựng để minh họa các khái niệm khác nhau trong lĩnh vực AI, bao gồm Xử lý ngôn ngữ tự nhiên (NLP) và Thị giác máy tính (Computer Vision). Mỗi ứng dụng được triển khai với giao diện web tương tác bằng Streamlit.
 
@@ -27,7 +27,7 @@
     * Một giao diện chatbot tương tác, tích hợp với các mô hình ngôn ngữ lớn thông qua Hugging Face.
     * Người dùng cần cung cấp thông tin đăng nhập Hugging Face để trò chuyện và nhận phản hồi từ AI.
 
-## ✨ Tính năng
+## 2.Tính năng
 
 ### Đối với ứng dụng Sửa lỗi từ:
 -   Tính toán khoảng cách Levenshtein giữa các từ một cách hiệu quả.
@@ -44,7 +44,7 @@
 -   Yêu cầu đăng nhập an toàn qua sidebar để kết nối với Hugging Face.
 -   Tương tác trực tiếp với các mô hình ngôn ngữ mạnh mẽ.
 
-## 🛠️ Công nghệ sử dụng
+## 3.Công nghệ sử dụng
 
 -   **Ngôn ngữ:** Python
 -   **Thư viện:**
@@ -54,7 +54,7 @@
     -   **HugChat:** Giao tiếp với API của Hugging Face Chat.
     -   **Pillow (PIL):** Xử lý và chuyển đổi định dạng hình ảnh.
 
-## 🚀 Hướng dẫn cài đặt và sử dụng
+## 4.Hướng dẫn cài đặt và sử dụng
 
 ### Yêu cầu
 -   Python 3.7+
@@ -101,7 +101,7 @@ Bạn có thể chạy riêng lẻ từng ứng dụng bằng các lệnh sau t�
     ```
     *Lưu ý: Bạn cần có tài khoản Hugging Face và nhập email/mật khẩu trên giao diện để sử dụng.*
 
-## 📁 Cấu trúc thư mục:
+## 5.Cấu trúc thư mục:
 ```
 Word-Correction-using-Levenshtein-Distance/
 ├── README.md
