@@ -76,7 +76,7 @@
 
 3.  **Cài đặt các thư viện cần thiết:**
     ```bash
-    pip install streamlit opencv-python numpy pillow hugchat
+    pip install streamlit opencv-python numpy pillow huggingface_hub
     ```
 
 ### Sử dụng
